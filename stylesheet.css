@@ -1,30 +1,311 @@
+@font-face{
+    font-family: 'dina';
+    src: url('dinas_font/dina_s_handwriting-webfont.woff') format('woff');
+    src: url('dinas_font/dina_s_handwriting-webfont.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'cartoonist';
+    src: url('cartoonist_font/sf_cartoonist_hand-webfont.woff') format('woff');
+    src: url('cartoonist_font/sf_cartoonist_hand-webfont.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'cartoonist_bold';
+    src: url('cartoonist_font/sf_cartoonist_hand_bold-webfont.woff') format('woff');
+    src: url('cartoonist_font/sf_cartoonist_hand_bold-webfont.woff2') format('woff2');
+}
+
 *{
     margin: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+:root{
+    --teal: #256d69;
+    --yellow: #cea83d;
+    --pink: #ce897a;
+    --purple: #52486d;
+    --tan: rgb(247, 243, 230);
+}
+.filler{
+    background-color: var(--pink);
+}
+
+header{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header_txt, #header_index{
+    display: grid;
+    grid-template-areas: '#title' '#subtitle';
+}
+#header_txt{
+    padding: 2.5rem 0 0;
+    border-bottom: 1px solid black;
+}
+#title{
+    font-family: dina;
+    width: fit-content;
+    margin: 0 0 0;
+    padding: 0 .75rem .75rem 1rem;
+}
+#subtitle{
+    font-family: dina;
+    width: fit-content;
+    margin: 0 0 0;
+    padding: 0 .75rem .75rem 1rem;
+}
+.info{
+    display: inlinegrid;
+    width: fit-content;
+    height: 4rem;
+    /*grid-template-areas: '#1 #2 #3';**/
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #cea73d8a;
+    border: 1px solid #8a6f23;
+}
+#1, #2, #3{
+    height: 4rem;;
+    justify-self: center;
+    align-self: center;
+}
+.box{
+    background-color: var(--teal);
+    overflow: scroll;
+}
+#description{
+    font-family: cartoonist;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 90%;
+    margin: 2rem auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1.5rem;
+}
+#food{
+    background-color: var(--pink);
+    width: 90%;
+    display: block;
+    margin: 2rem auto;
+}
+/* doesn't work in most browsers
+.box::-webkit-scrollbar{
+    background-color: var(--teal); 
+  }
+.box::-webkit-scrollbar-thumb {
+    background: #174442; 
+  }
+**/
+
+/* HOME PAGE **/
+#whirlies{
+    margin: 1rem 2rem;
+    transform: rotate(-20deg);
+    position: absolute;
+    left: -15px;
+    top: 60px;
+    z-index: -1;
+}
+#header_index{
+    margin: 2rem 5rem 0;
+
 }
 
 
-@media screen and (max-width: 800px){
+/* SMALL **/
+@media screen and (max-width: 350px){
+    li, #description{
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+    .box h2{
+        font-size: 1.75rem;
+    }
+    #description, #food{
+        display: flex;
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+/* RECIPE PAGE **/
     #largeteal, #medteal{
         display: none;
     }
+    main{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    #tinyflower{
+        width: 80px;
+    }
+    #title{
+        font-size: 1.65rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .box{
+        max-height: 30rem;
+        box-shadow: 6px 6px 10px rgb(170, 170, 170);
+        width: 90%;
+        margin: 2rem auto;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 3rem;
+    }
+    .box h2{
+        font-size: 2rem;
+    }
+    ul {
+        list-style: circle;
+      }
+
+/* HOME PAGE **/
+      #whirlies{
+          display: none;
+      }
+
 }
 
 
-@media screen and (max-width: 1100px){
+
+/* MED **/
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    #whirlies{
+        top: 60px;
+        width: 7%;
+        height: 22%;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1099px) {
+#whirlies{
+    top: 80px;
+    width: 5%;
+    height: 20%;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+/* RECIPE PAGE **/
     #largeteal{
         display: none;
     }
     #medteal{
         width: 100%;
     }
+    main{
+        width: 90%;
+        margin: 2rem auto;
+    }
+    #title{
+        font-size: 2rem;
+    }
+    #subtitle{
+        font-size: 1.25rem;
+    }
+    #boxes{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        margin: 4rem 0;
+    }
+    .box{
+        height: 30rem;
+        box-shadow: 6px 6px 10px lightgray;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 3rem;
+        overflow: scroll;
+
+    }
+    .box h2{
+        font-size: 2rem;
+    }
+    ul {
+        list-style: circle;
+      }
+    #ingredients{
+        width: 40%;
+    }
+    #instructions{
+        width: 50%;
+    }
+    #food{
+        width:70%;
+    }
+
+
+/* HOME PAGE **/
+
+
 }
 
 
+/* LARGE **/
 @media screen and (min-width: 1100px){
+/** RECIPE PG **/
     #medteal{
         display: none;
     }
     #largeteal{
         width: 100%;
     }
+    main{
+        width: 70%;
+        margin: 2rem auto;
+    }
+    #title{
+        font-size: 2.5rem;
+    }
+    #subtitle{
+        font-size: 1.5rem;
+    }
+    #boxes{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        margin: 4rem 0;
+    }
+    .box{
+        height: 30rem;
+        box-shadow: 6px 6px 10px lightgray;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 2rem;
+        overflow: scroll;
+    }
+    .box h2{
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+    ul {
+        list-style: circle;
+      }
+    #ingredients{
+        width: 40%;
+    }
+    #instructions{
+        width: 50%;
+    }
+    #food{
+        width: 70%;
+    }
+
+/* HOME PAGE **/
+    #whirlies{
+    width: 5%;
+    height: 20%;
+    }
+
 }
