@@ -110,11 +110,44 @@ header{
     top: 60px;
     z-index: -1;
 }
-#header_index{
-    margin: 2rem 5rem 0;
+.tile{
+    width: 250px;
+    box-shadow: 5px 5px 10px lightgray;
+    margin: 1rem;
 
 }
-
+.tile_pic{
+    width: 250px;
+    height: 250px;
+    background-color: var(--pink);
+}
+.tile_txt{
+    font-family: cartoonist;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#mandala{
+    width: 1.5rem;
+    margin: auto 1rem;
+}
+h7{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+.sub{
+    font-size: 1.25rem;
+    margin: 0 1.25rem;
+    padding: 0 0 1rem;
+}
+#smallteal{
+    width: 100%;
+}
 
 /* SMALL **/
 @media screen and (max-width: 350px){
@@ -128,8 +161,18 @@ header{
     #description, #food{
         display: flex;
     }
-
-
+    /*HOME**/
+    #header_index{
+        margin: 2rem 0;
+    }
+    .tile_pic{
+        width:125px;
+        height: 125px;
+        background-color: var(--pink);
+    }
+}
+@media screen and (min-width: 351px){
+    
 }
 
 @media screen and (max-width: 600px){
@@ -172,7 +215,33 @@ header{
       #whirlies{
           display: none;
       }
-
+      #header_index{
+        margin: 2rem 0;
+    }
+    .tile_pic{
+        width:125px;
+        height: 125px;
+        background-color: var(--pink);
+    }
+    .tile{
+        width: 125px;
+    }
+    #mandala{
+        display: none;
+    }
+    h7{
+        font-family: cartoonist;
+        font-size: 1.37rem;
+        padding: 1rem auto;
+        margin: 1rem .5rem;
+        text-align: center;
+    }
+    .sub{
+        font-size: 1rem;
+    }
+    .grid{
+        display: block;
+    }
 }
 
 
@@ -182,19 +251,19 @@ header{
     #whirlies{
         top: 60px;
         width: 7%;
-        height: 22%;
+        height: 18%;
     }
 }
 @media screen and (min-width: 801px) and (max-width: 1099px) {
 #whirlies{
     top: 80px;
     width: 5%;
-    height: 20%;
+    height: 18%;
     }
 }
 @media screen and (min-width: 601px) and (max-width: 1099px) {
 /* RECIPE PAGE **/
-    #largeteal{
+    #largeteal, #smallteal{
         display: none;
     }
     #medteal{
@@ -207,7 +276,7 @@ header{
     #title{
         font-size: 2rem;
     }
-    #subtitle{
+    .subtitle{
         font-size: 1.25rem;
     }
     #boxes{
@@ -242,7 +311,9 @@ header{
     #food{
         width:70%;
     }
-
+    #header_index{
+        margin: 2rem 5rem 0;
+    }
 
 /* HOME PAGE **/
 
@@ -253,7 +324,7 @@ header{
 /* LARGE **/
 @media screen and (min-width: 1100px){
 /** RECIPE PG **/
-    #medteal{
+    #medteal, #smallteal{
         display: none;
     }
     #largeteal{
@@ -307,5 +378,7 @@ header{
     width: 5%;
     height: 20%;
     }
-
+    #header_index{
+        margin: 2rem 5rem 0;
+    }
 }
