@@ -34,7 +34,7 @@
 
 header{
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
 }
@@ -58,14 +58,29 @@ header{
     margin: 0 0 0;
     padding: 0 .75rem .75rem 1rem;
 }
+#1{
+    min-width: 91.033333px;
+}
 .info{
-    display: inlinegrid;
+    display: flex;
+    flex-flow: row;
+    margin: auto 0 auto 4rem;
+    box-sizing: content-box;
+}
+.info, .info_box{
     width: fit-content;
-    height: 4rem;
     /*grid-template-areas: '#1 #2 #3';**/
-    grid-template-rows: repeat(3, 1fr);
-    background-color: #cea73d8a;
-    border: 1px solid #8a6f23;
+    background-color: var(--yellow);
+    border: 1px solid #a98729;
+}
+.info_box{
+    font-family: cartoonist;
+    color: var(--tan);
+    font-size: 1.2rem;
+    padding: .5rem .75rem;
+    height: fit-content;
+    line-height: 2rem;
+    text-align: center;
 }
 #1, #2, #3{
     height: 4rem;;
@@ -110,11 +125,16 @@ header{
     top: 60px;
     z-index: -1;
 }
+.recipes{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .tile{
     width: 250px;
     box-shadow: 5px 5px 10px lightgray;
     margin: 1rem;
-
 }
 .tile_pic{
     width: 250px;
@@ -170,11 +190,10 @@ h7{
         height: 125px;
         background-color: var(--pink);
     }
+    a{
+        display: none;
+    }
 }
-@media screen and (min-width: 351px){
-    
-}
-
 @media screen and (max-width: 600px){
 /* RECIPE PAGE **/
     #largeteal, #medteal{
@@ -197,12 +216,12 @@ h7{
         max-height: 30rem;
         box-shadow: 6px 6px 10px rgb(170, 170, 170);
         width: 90%;
-        margin: 2rem auto;
         font-family: cartoonist;
         font-size: 1.5rem;
         color: var(--tan);
         padding: 1rem 2rem;
         line-height: 3rem;
+        margin: 0 auto 3rem;
     }
     .box h2{
         font-size: 2rem;
@@ -210,6 +229,9 @@ h7{
     ul {
         list-style: circle;
       }
+    #home_button{
+        display: none;
+    }
 
 /* HOME PAGE **/
       #whirlies{
@@ -242,6 +264,7 @@ h7{
     .grid{
         display: block;
     }
+
 }
 
 
@@ -317,9 +340,16 @@ h7{
 
 /* HOME PAGE **/
 
-
 }
-
+@media screen and (max-width: 900px){
+    .header{
+        flex-flow: wrap;
+    }
+    .info{
+        margin: 3rem auto;
+    }
+    
+}
 
 /* LARGE **/
 @media screen and (min-width: 1100px){
