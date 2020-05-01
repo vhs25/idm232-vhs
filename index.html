@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="stylesheet.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -18,16 +19,22 @@
                 <h1 id="title">Quarantine Cook</h1>
                 <h3 id="subtitle">because you have literally nothing else to do.</h3>
             </div>
+            <div id="bar">
             <div class="filter"> 
                 <p>&or;</p>
-                <div class="filter_container">
-                <div class="filter_content">
-                    <a href="#">protein</a>
-                    <a href="#">cook time</a>
-                    <a href="#">servings</a>
-                    <a href="#">calories</a>
-                </div>
-                </div>
+                <select class="filter_content" placeholder="filter">
+                    <option value="" disabled selected> select filter</option>
+                    <option value="1">all</option>
+                    <option value="2">protein</option>
+                    <option value="3">cook time</option>
+                    <option value="4">servings</option>
+                    <option value="5">calories</option>
+                </select>
+            </div>
+                <input class="search" placeholder="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <a href="help.html" id="help">?</a>
+                <a href="noresultsfound.html" id="nrf">*</a>
             </div>
         </header>
     <main id="index">
@@ -82,5 +89,6 @@
         </a>
     </div>
     </main>
+<script src="script.js"></script>
 </body>
 </html>
