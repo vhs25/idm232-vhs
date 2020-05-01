@@ -175,7 +175,7 @@ h7{
 #smallteal{
     width: 100%;
 }
-.filter, .search{
+.search{
     font-family: cartoonist;
     font-size: 1.25rem;
     background-color: var(--gray);
@@ -187,74 +187,71 @@ h7{
     position: relative;
     display: inline-block;
 }
-.filter{
-    margin: 2rem 0 0 2rem;
-    bottom: 1px;
-}
+
 option{
     font-family: cartoonist;
 
 }
 .search{
-    margin: 2rem 0 0;
     padding: .25rem .75rem;
     bottom: 2px;
     right: 5px;
 }
-button, #help, #nrf{
+#button{
     background-color: var(--gray);
     padding: .25rem .25rem;
     border: 1px solid var(--teal);
     height: 30px;
     position: relative;
     display: inline-block;
-    right: 10px;
+    right: 9.5px;
     bottom: 3px;
 }
 #help{
-    right: 15px;
-    bottom: 4.3px;
+    background-color: var(--gray);
+    padding: .25rem .25rem;
+    border: 1px solid var(--teal);
+    height: 30px;
     width: 25px;
     text-align: center;
     font-family: dina;
+    position: absolute;
+    right: 23px;
+    top: 20px;
+    z-index: 5;
 }
-#nrf{
-    font-family: cartoonist;
-    width: 25px;
-    text-align: center;
-    bottom: -2.5px;
-    right: 20px;
-}
-#nrf_text{
-    font-size: 1.5rem;
-    font-family: cartoonist;
-}
-button:hover, #help:hover{
-    background-color: var(--teal);
+#button:hover, #help:hover{
+    background-color: var(--pink);
 }
 
-  .filter_content{
-    background-color: var(--gray);
-    position: absolute;
-    width: 8rem;
-    text-align: center;
-    z-index: 1;
-    right: 0;
-    top: 0;
-    border: 1px solid var(--teal);
+  #filter_content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 380px;
+    margin: 2rem 0 2rem 2.8rem;
   }
-  .filter_content a{
-      padding: .25rem .25rem;
-      border-top: 1px solid var(--teal);
-      padding: 0 2rem;
+ .filters{
+      padding: .25rem .25rem ;
       display: block;
       height: 30px;
+      font-family: cartoonist;
+      font-size: 1.35rem;
+      background-color: transparent;
+      box-shadow: 0;
+      border: none;
+      color: var(--teal);
   }
-  .filter:hover .filter_content{
-    display: block;
+  .filters:hover{
+    color: var(--pink);
   }
 
 /* SMALL **/
+@media screen and (max-width: 330px){
+    br{
+        display: block;
+    }
+}
 @media screen and (max-width: 350px){
     li, #description{
         font-size: 1.25rem;
@@ -270,11 +267,6 @@ button:hover, #help:hover{
     #header_index{
         margin: 2rem 0;
     }
-    .tile_pic{
-        width:125px;
-        height: 125px;
-        background-color: var(--pink);
-    }
     #home_btn{
         display: none;
     }
@@ -286,6 +278,9 @@ button:hover, #help:hover{
     #bar{
         margin: 1rem 1rem 0;
         height: 3rem;
+    }
+    #filter_content{
+        margin: 2rem 0;
     }
 }
 @media screen and (max-width: 600px){
@@ -334,14 +329,6 @@ button:hover, #help:hover{
       #header_index{
         margin: 2rem 0 0;
     }
-    .tile_pic{
-        width:125px;
-        height: 125px;
-        background-color: var(--pink);
-    }
-    .tile{
-        width: 125px;
-    }
     #mandala{
         display: none;
     }
@@ -358,12 +345,28 @@ button:hover, #help:hover{
     .grid{
         display: block;
     }
+    #help{
+        top: 50px;
+    }
+}
 
+@media screen and (max-width: 549px){
+    #searchbar{
+        margin: 2rem 4rem 0 1.3rem;
+        height: fit-content;
+    }
 }
 
 
-
 /* MED **/
+@media screen and (min-width: 550px){
+    #searchbar{
+        position: absolute;
+        right: 15px;
+        top: 100px;
+        z-index: 7;
+    }
+}
 @media screen and (min-width: 601px) and (max-width: 800px) {
     #whirlies{
         top: 60px;
