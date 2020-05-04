@@ -60,11 +60,6 @@ header{
     margin: 0 0 0;
     padding: 0 .75rem .75rem 1rem;
 }
-#nrf{
-    font-family: cartoonist;
-    font-size: 1.5rem;
-    margin: 3rem 0;
-}
 #1{
     min-width: 91.033333px;
 }
@@ -86,8 +81,14 @@ header{
     font-size: 1.2rem;
     padding: .5rem .75rem;
     height: fit-content;
-    line-height: 2rem;
+    line-height: 1.8rem;
     text-align: center;
+}
+li{
+    margin: 0 0 1.8rem;
+}
+li:first-child{
+    margin: 2rem 0 1.8rem ;
 }
 #1, #2, #3{
     height: 4rem;;
@@ -96,12 +97,17 @@ header{
 }
 .box{
     background-color: var(--teal);
-    overflow: scroll;
+}
+#ingredients{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 500px;
 }
 #description{
     font-family: cartoonist;
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 1.8rem;
     width: 90%;
     margin: 2rem auto;
     border-top: 1px solid black;
@@ -114,14 +120,6 @@ header{
     display: block;
     margin: 2rem auto;
 }
-/* doesn't work in most browsers
-.box::-webkit-scrollbar{
-    background-color: var(--teal); 
-  }
-.box::-webkit-scrollbar-thumb {
-    background: #174442; 
-  }
-**/
 
 /* HOME PAGE **/
 #whirlies{
@@ -245,6 +243,21 @@ option{
   .filters:hover{
     color: var(--pink);
   }
+#nrf_text{
+    font-family: cartoonist;
+    font-size: 1.8rem;
+    margin: 3rem 2rem 0 2rem;
+}
+#nrf_img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+
 
 /* SMALL **/
 @media screen and (max-width: 330px){
@@ -255,7 +268,7 @@ option{
 @media screen and (max-width: 350px){
     li, #description{
         font-size: 1.25rem;
-        line-height: 2rem;
+        line-height: 1.8rem;
     }
     .box h2{
         font-size: 1.75rem;
@@ -302,14 +315,13 @@ option{
         font-size: 1rem;
     }
     .box{
-        max-height: 30rem;
         box-shadow: 6px 6px 10px rgb(170, 170, 170);
         width: 90%;
         font-family: cartoonist;
         font-size: 1.5rem;
         color: var(--tan);
         padding: 1rem 2rem;
-        line-height: 3rem;
+        line-height: 1.8rem;
         margin: 0 auto 3rem;
     }
     .box h2{
@@ -347,6 +359,14 @@ option{
     }
     #help{
         top: 50px;
+    }
+
+    #nrf_img{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
 }
 
@@ -412,14 +432,12 @@ option{
         justify-content: space-around;
     }
     .box{
-        height: 30rem;
         box-shadow: 6px 6px 10px lightgray;
         font-family: cartoonist;
         font-size: 1.5rem;
         color: var(--tan);
         padding: 1rem 2rem;
-        line-height: 3rem;
-        overflow: scroll;
+        line-height: 1.8rem;
 
     }
     .box h2{
@@ -483,14 +501,12 @@ option{
         margin: 4rem 0;
     }
     .box{
-        height: 30rem;
         box-shadow: 6px 6px 10px lightgray;
         font-family: cartoonist;
         font-size: 1.5rem;
         color: var(--tan);
         padding: 1rem 2rem;
-        line-height: 2rem;
-        overflow: scroll;
+        line-height: 1.8rem;
     }
     .box h2{
         font-size: 2rem;
