@@ -10,12 +10,6 @@
     src: url('cartoonist_font/sf_cartoonist_hand-webfont.woff2') format('woff2');
 }
 
-@font-face{
-    font-family: 'cartoonist_bold';
-    src: url('cartoonist_font/sf_cartoonist_hand_bold-webfont.woff') format('woff');
-    src: url('cartoonist_font/sf_cartoonist_hand_bold-webfont.woff2') format('woff2');
-}
-
 *{
     margin: 0;
     font-size: 100%;
@@ -296,8 +290,30 @@ option{
     width: 70%;
 }
 
-
-
+/* HELP SCREEN **/
+.help_head{
+    font-family: cartoonist;
+    font-size: 1.5rem;
+    margin: 2rem 2rem 1.2rem;
+}
+.help_head:first-child{
+    margin: 4rem 2rem 1.2rem;
+}
+.help_txt{
+    font-family: cartoonist;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.help_txt li{
+    margin: 1.2rem 1rem;
+}
+.help_txt li:last-child{
+    margin: 1.2rem 1rem 3rem;
+}
+#help_main{
+    width: 80%;
+    margin: auto;
+}
 
 /* SMALL **/
 @media screen and (max-width: 330px){
@@ -418,6 +434,9 @@ option{
         margin: 2rem 4rem 0 1.3rem;
         height: fit-content;
     }
+    #help_main{
+        width: 95%;
+    }
 }
 
 
@@ -446,6 +465,14 @@ option{
         max-width: 40%;
         min-width: 30%;
         margin: 0;
+    }
+
+    #help_main{
+        width: 60%;
+        margin: 10% 7rem 30% 7rem;
+    }
+    #header{
+        margin: 0 auto;
     }
 }
 
@@ -585,6 +612,21 @@ option{
     #food{
         width: 70%;
     }
+    #boxes{
+        max-width: 80%;
+        margin:  4rem auto;
+
+    }
+    #bottom{
+        max-width: 80%;
+        margin: auto;
+    }
+    #header_txt{
+        margin: 0 3rem 0 0;
+    }
+    .info{
+        margin: 0 auto 3rem;
+    }
 
 /* HOME PAGE **/
     #whirlies{
@@ -595,6 +637,23 @@ option{
         margin: 2rem 5rem 0;
     }
     .info{
-        margin: 3rem 3rem 0;
+        margin: 3rem 3rem 0 .8rem;
+    }
+
+/* HELP **/
+    #help_main{
+        width: 40%;
+        margin: 10% 7rem 30% 7rem;
+    }
+}
+@media screen and (min-width: 2000px){
+    #boxes{
+        max-width: 60%;
+        margin:  4rem auto;
+
+    }
+    #bottom{
+        max-width: 60%;
+        margin: auto;
     }
 }
