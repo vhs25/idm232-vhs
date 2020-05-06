@@ -48,6 +48,48 @@ header{
     padding: 2rem 0 0;
     border-bottom: 1px solid black;
 }
+
+/* Source Code - http://jsfiddle.net/gaby/9Ryvs/7/ **/
+#tinyflower:hover{
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 3000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: spin;
+        -moz-animation-duration: 3000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -ms-animation-name: spin;
+        -ms-animation-duration: 3000ms;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: linear;
+        
+        animation-name: spin;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        }
+        @-ms-keyframes spin {
+        from { -ms-transform: rotate(0deg); }
+        to { -ms-transform: rotate(1080deg); }
+        }
+        @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(1080deg); }
+        }
+        @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(1080deg); }
+        }
+        @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(1080deg);
+        }
+}
+
 #title{
     font-family: dina;
     width: fit-content;
@@ -71,7 +113,6 @@ header{
 }
 .info, .info_box{
     width: fit-content;
-    /*grid-template-areas: '#1 #2 #3';**/
     background-color: var(--yellow);
     border: 1px solid #a98729;
 }
@@ -91,7 +132,7 @@ li:first-child{
     margin: 2rem 0 1.8rem ;
 }
 #1, #2, #3{
-    height: 4rem;;
+    height: 4rem;
     justify-self: center;
     align-self: center;
 }
@@ -102,7 +143,7 @@ li:first-child{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 500px;
+    max-height: fit-content;
 }
 #description{
     font-family: cartoonist;
@@ -333,6 +374,9 @@ option{
     #home_button{
         display: none;
     }
+    #ingredients{
+        position: initial;
+    }
 
 /* HOME PAGE **/
       #whirlies{
@@ -387,7 +431,7 @@ option{
         z-index: 7;
     }
 }
-@media screen and (min-width: 601px) and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     #whirlies{
         top: 60px;
         width: 7%;
@@ -408,7 +452,7 @@ option{
         margin: 4rem 0;
     }
 }
-@media screen and (min-width: 601px) and (max-width: 1099px){
+@media screen and (min-width: 600px) and (max-width: 1099px){
 /* RECIPE PAGE **/
     #largeteal, #smallteal{
         display: none;
