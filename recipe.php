@@ -40,7 +40,7 @@
         <div id="boxes">
             <div id="fix_it">
             <div id="ingredients" class="box">
-                <h2>ingredients</h2>
+                <h10>ingredients</h10>
                 <ul>
                     <li>1 tbs sugar</li>
                     <li></li>
